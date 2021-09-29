@@ -1,0 +1,50 @@
+<div class="container-form">
+
+  <h1 mat-dialog-title>Novo cadastro</h1>
+  <div mat-dialog-content>
+    <form class="example-form" [formGroup]="bookForm">
+      <div class="container-contato" fxLayout="row wrap">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Título do livro</mat-label>
+          <input
+            matInput
+            placeholder=""
+            formControlName="TituloLivro"
+            name="TituloLivro"
+          />
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+          <mat-label>Ano do lançamento</mat-label>
+          <input matInput placeholder="" formControlName="AnoLancamento" name="AnoLancamento" />
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+          <mat-label>Nome do autor</mat-label>
+          <input
+            matInput
+            placeholder=""
+            formControlName="Autor"
+            name="Autor"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Gênero do livro</mat-label>
+          <input
+            matInput
+            placeholder=""
+            formControlName="Genero"
+            name="Genero"
+          />
+        </mat-form-field>
+      </div>
+  
+    </form>
+  </div>
+  
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="registerNewBook()" >Adicionar Livro!</button>
+  </div>
+</div>
