@@ -13,17 +13,23 @@ export class RegisterNewBookComponent implements OnInit {
   constructor(private fb: FormBuilder, private rest: BookService) {}
 
   ngOnInit(): void {
+    this.generateBooks();
+
     this.bookForm = this.fb.group({
-      TituloLivro: ["", [Validators.required]],
-      AnoLancamento: ["", [Validators.required]],
+      Titulo: ["", [Validators.required]],
+      Ano: ["", [Validators.required]],
       Autor: ["", [Validators.required]],
       Genero: ["", [Validators.required]],
     });
   }
 
   registerNewBook() {
-    // this.rest
-    //   .postNewRegisteredBook(this.bookForm.value)
-    //   .subscribe((result) => {});
+    this.rest.postNewRegisteredBook(this.bookForm.value).subscribe((result) => {
+      window.location.reload();
+    });
+  }
+
+  generateBooks() {
+    this.rest.generateBooks().subscribe((result) => {});
   }
 }

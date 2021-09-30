@@ -8,7 +8,7 @@ import { BookService } from "src/app/shared/service/books.service";
   styleUrls: ["list-books.component.css"],
 })
 export class ListBooksComponent implements OnInit {
-  registeredBooks!: Books[];
+  registeredBooks!: any;
 
   constructor(public rest: BookService) {}
 
@@ -16,9 +16,9 @@ export class ListBooksComponent implements OnInit {
     this.getBooksList();
   }
 
-  getBooksList(){
-    // this.rest.getAllBooks().subscribe((data) => {
-    //   this.registeredBooks = data;
-    // })
+  getBooksList() {
+    this.rest.getAllBooks().subscribe((data: Books) => {
+      this.registeredBooks = data;
+    });
   }
 }

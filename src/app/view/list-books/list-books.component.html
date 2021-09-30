@@ -1,10 +1,10 @@
 <div class="container">
-  <!-- <ng-container *ngFor="let books of registeredBooks"> -->
+  <ng-container *ngFor="let books of registeredBooks">
     <div class="card">
-      <h2 class="card-title">Título Exemplo</h2>
-      <span><b>Ano de lançamento:</b></span>
-      <span><b>Nome do autor:</b></span>
-      <span><b>Gênero do livro:</b></span>
+      <h2 class="card-title">{{books.titulo}}</h2>
+      <span><b>Ano de lançamento:</b> {{books.ano}}</span>
+      <span><b>Nome do autor:</b> {{books.autor}}</span>
+      <span><b>Gênero do livro:</b> {{books.genero}}</span>
     </div>
-  <!-- </ng-container> -->
+  </ng-container>
 </div>
