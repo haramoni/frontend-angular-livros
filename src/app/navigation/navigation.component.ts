@@ -4,11 +4,11 @@ import { Component } from "@angular/core";
   selector: "app-navigation",
   template: `
     <mat-tab-group mat-align-tabs="center">
-      <mat-tab label="Cadastrar Livros"
-      ><app-register-new-book></app-register-new-book
-      ></mat-tab>
-      <mat-tab label="Listar Livros"
-      ><app-list-books></app-list-books
+      <mat-tab label="Listar Livros">
+        <app-list-books></app-list-books>
+      </mat-tab>
+      <mat-tab label="Cadastrar Livros">
+        <app-register-new-book></app-register-new-book
       ></mat-tab>
     </mat-tab-group>
   `,
